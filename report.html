@@ -1,0 +1,104 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html >
+  <head>
+  	<link rel='icon' type='image/jpg' href="{% static 'images/favicon.jpg' %}">
+    <meta charset="UTF-8">
+    <title>S.H.I.E.L.D.</title>
+        <style>
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+	font-size: 12px;
+  	padding-top: 60px;
+  	padding-bottom: 0;
+	min-width: 100%;
+	width: 100%;
+	max-width: 100%;
+	min-height: 100%;
+	height: 100%;
+	max-height: 100%;
+	background: url('static/images/shield2.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.boxed {
+  background-color: white;
+  top: 60px;
+  margin: 40px;
+  border: 1px solid white ;
+}
+
+.header{
+	position: absolute;
+	left: calc(50% - 120px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 30px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: Red/*#5379fa*/ !important;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+  </style>
+
+  <script src="{% static 'js/prefixfree.min.js'%}"></script>
+  </head>
+  <body>
+  <link rel='stylesheet' href="{% static 'css/navbar.css'%}" >
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+          	<li><a href="/about">About</a></li>
+            <li><a href="/">Login</a></li>
+            <li class="active"><a href="/report">Report</a></li>
+            <li><a href="/apply">Apply</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+		<div class="header">
+			<div>Report an <span>Incident</span></div>
+		</div>
+		<div class="boxed">
+		  
+		</div>
+   </body>
+  </html>

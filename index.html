@@ -1,0 +1,210 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html >
+  <head>
+  	<link rel='icon' type='image/jpg' href="{% static 'images/favicon.jpg' %}">
+    <meta charset="UTF-8">
+    <title>S.H.I.E.L.D.</title>
+        <style>
+body{
+	background: #fff;
+
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+  	padding-top: 70px;
+  	padding-bottom: 30px;
+
+}
+html{
+  height: 100%;
+}
+.body{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	background: url('static/images/shield2.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	z-index: 0;
+}
+
+.grad{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.header{
+	position: absolute;
+	top: calc(50% - 105px);
+	left: calc(50% + 230px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 30px;
+	font-weight: 200;
+}
+
+.header div span{
+	color: orange/*#5379fa*/ !important;
+}
+
+.login{
+	position: absolute;
+	top: calc(50% - 75px);
+	left: calc(50% + 220px);
+	height: 150px;
+	width: 350px;
+	padding: 10px;
+	z-index: 2;
+}
+
+.login input[type=text]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+}
+
+.login input[type=password]{
+	width: 250px;
+	height: 30px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 4px;
+	margin-top: 10px;
+}
+
+.login input[type=button]{
+	width: 250px;
+	height: 30px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+.login input[type=button]:hover{
+	opacity: 0.8;
+}
+
+.login input[type=button]:active{
+	opacity: 0.6;
+}
+
+.login input[type=text]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=password]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type=button]:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+	</style>
+
+	<script src="{% static 'js/prefixfree.min.js' %}"></script>
+  </head>
+  <body>
+  <link rel='stylesheet' href="{% static 'css/navbar.css'%}" >
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+          	<li><a href="/about">About</a></li>
+            <li class="active" ><a href="/">Login</a></li>
+            <li><a href="/report">Report</a></li>
+            <li><a href="/apply">Apply</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	<div class="body"></div>
+	<div class="grad"></div>
+		<div class="header">
+			<div>Shield <span>Login</span></div>
+		</div>
+		<br>
+		<div class="login">
+				<input type="text" placeholder="username" name="user"><br>
+				<input type="password" placeholder="password" name="password"><br>
+				<input type="button" value="Login">
+				<br>
+				<a href="/frgpass" style=' color: light blue;font-family: 'Exo', sans-serif;	font-size: 16px; font-weight: 400;padding: 4px;	margin-top: 10px;'>forgot password?</a>
+		</div>
+  </body>
+</html>
